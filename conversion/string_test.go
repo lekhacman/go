@@ -29,3 +29,31 @@ func TestToString(t *testing.T) {
 		}
 	}
 }
+
+func TestToInt(t *testing.T) {
+	cases := []struct {
+		expect  int
+		input string
+	}{
+		{-9223372036854775808, "-9223372036854775808"},
+		{-2147483648, "-2147483648"},
+		{-5, "-5"},
+		{0, "0"},
+		{5, "5"},
+		{2147483647, "2147483647"},
+		{9223372036854775807, "9223372036854775807"},
+	}
+
+	for _, c := range cases {
+
+		result, err := ToInt(c.input)
+		if err != nil {
+
+		}
+		//fmt.Println(result)
+
+		if int64(c.expect) != result {
+			t.Errorf("ToString(%v) == %v. Expect: %v", c.input, result, c.expect)
+		}
+	}
+}
