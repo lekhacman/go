@@ -11,3 +11,13 @@ func TestReadContent(t *testing.T) {
 	fmt.Println(content)
 	assert.Equal(t, "Hello World!\n", content)
 }
+
+func TestWriteText(t *testing.T) {
+	path := "./write.txt"
+	text := "Hello Man"
+	path, err := WriteText(path, text)
+	if err != nil {
+		t.Errorf("Failed to write file")
+	}
+	assert.Equal(t, text, ReadContent(path))
+}
