@@ -2,6 +2,7 @@ package conversion
 
 import (
 	"testing"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestToString(t *testing.T) {
@@ -51,9 +52,6 @@ func TestToInt(t *testing.T) {
 
 		}
 		//fmt.Println(result)
-
-		if int64(c.expect) != result {
-			t.Errorf("ToString(%v) == %v. Expect: %v", c.input, result, c.expect)
-		}
+		assert.Equal(t, int64(c.expect), result)
 	}
 }
