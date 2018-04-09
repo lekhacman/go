@@ -1,9 +1,9 @@
 package io
 
 import (
-	"testing"
 	"fmt"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestReadContent(t *testing.T) {

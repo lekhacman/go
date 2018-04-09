@@ -1,8 +1,8 @@
 package conversion
 
 import (
-	"testing"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestToString(t *testing.T) {
@@ -33,8 +33,8 @@ func TestToString(t *testing.T) {
 
 func TestToInt(t *testing.T) {
 	cases := []struct {
-		expect  int
-		input string
+		expect int
+		input  string
 	}{
 		{-9223372036854775808, "-9223372036854775808"},
 		{-2147483648, "-2147483648"},

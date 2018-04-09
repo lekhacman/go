@@ -1,8 +1,8 @@
 package functional
 
 import (
-	"testing"
 	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestMemoize(t *testing.T) {
@@ -10,8 +10,8 @@ func TestMemoize(t *testing.T) {
 		return i + 2
 	})
 
-	cases := []struct{
-		input int
+	cases := []struct {
+		input    int
 		expected int
 	}{
 		{0, 2},

@@ -1,15 +1,15 @@
 package main
 
 import (
-	"net/http"
 	"fmt"
+	"net/http"
 )
 
-func ping(w http.ResponseWriter, r *http.Request)  {
+func ping(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "pong")
 }
 
-func pong(w http.ResponseWriter, r *http.Request)  {
+func pong(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "ping")
 }
 
